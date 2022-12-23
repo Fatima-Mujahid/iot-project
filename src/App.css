@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+}
+
+.table {
+  display: flex;
+  gap: 10px;
+}
