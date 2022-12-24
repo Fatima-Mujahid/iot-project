@@ -1,45 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React from 'react';
 import "./App.css";
-import { moment } from "moment";
-import { db } from "./firebase";
-import { ref, onValue } from "firebase/database";
-function App() {
-  const [sensorData, setSensorData] = useState({});
-  const [bpms, setBpms] = useState([]);
-  const [timestamps, setTimestamps] = useState([]);
+import BpmView from './BpmView';
+import Navbar from './Navbar';
+import PulseReportView from './PulseReportView';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-  useEffect(() => {
-    const bpmRef = ref(db, "bpm/");
-    onValue(bpmRef, (snapshot) => {
-      const data = snapshot.val();
-      setSensorData(data);
-      const updatedBpms = [];
-      const updatedTimestamps = [];
-      for (const [key, value] of Object.entries(data)) {
-        updatedBpms.push(value.bpm);
-        updatedTimestamps.push(value.timestamp);
-      }
-      setBpms(updatedBpms);
-      setTimestamps(updatedTimestamps);
-    });
-  }, []);
+function App() {
 
   return (
-    <div className="App">
-      <div className="table">
-        <div>
-          <h2>Timestamp</h2>
-          {timestamps.map((item) => (
-            <p>{item}</p>
-          ))}
-        </div>
-        <div>
-          <h2>Bpm</h2>
-          {bpms.map((item) => (
-            <p>{item}</p>
-          ))}
-        </div>
-      </div>
+    <div>
+    <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<BpmView />} />
+          {/* <Route path="/sleep" element={<SleepView />} />
+          <Route path="/weight" element={<WeightView />} />
+          <Route path="/walk" element={<WalkView />} /> */}
+          <Route path="/pulsereport" element={<PulseReportView />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
