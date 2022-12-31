@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ReactComponent as Logo } from "./logo copy.svg";
-import "./Navbar.css";
+import { ReactComponent as Logo } from "../logo.svg";
+import "../styles/Navbar.css";
 
 export default function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);

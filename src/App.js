@@ -1,8 +1,8 @@
 import React from 'react';
-import "./App.css";
-import BpmView from './BpmView';
-import Navbar from './Navbar';
-import PulseReportView from './PulseReportView';
+import "./styles/App.css";
+import BpmView from "./components/BpmView";
+import Navbar from './components/Navbar';
+import PulseReportView from "./components/PulseReportView";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
