@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ReactComponent as Logo } from "./logo copy.svg";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -6,10 +7,12 @@ export default function Navbar() {
 
   return (
     <nav className="navigation">
-      
-      <a href="/" className="brand-name">
-        Pulse Plus
-      </a>
+      <div className="brand-name">
+        <a href="/">
+          <Logo />
+        </a>
+      </div>
+
       <button
         className="hamburger"
         onClick={() => {
@@ -37,19 +40,29 @@ export default function Navbar() {
       >
         <ul>
           <li>
-            <a className="navList" href="/">Rate</a>
+            <a className="navList" href="/">
+              Rate
+            </a>
           </li>
           <li>
-            <a className="navList" href="/pulsereport">Activity</a>
+            <a className="navList" href="/pulsereport">
+              Activity
+            </a>
           </li>
           <li>
-            <a className="navList" href="/walk">Distance</a>
+            <a className="navList" href="/walk">
+              Distance
+            </a>
           </li>
           <li>
-            <a className="navList" href="/weight">Weight</a>
+            <a className="navList" href="/weight">
+              Weight
+            </a>
           </li>
-          <li style={{ marginRight: '90px'}}>
-            <a className="navList" href="/sleep">Sleep</a>
+          <li style={{ marginRight: "90px" }}>
+            <a className="navList" href="/sleep">
+              Sleep
+            </a>
           </li>
         </ul>
       </div>
