@@ -54,20 +54,10 @@ export default function Navbar() {
               Distance
             </a>
           </li>
-<<<<<<< HEAD:src/Navbar.js
-          <li style={{ marginRight: '90px'}}>
-            <a className="navList" href="/sleep">Sleep</a>
-=======
-          <li>
-            <a className="navList" href="/weight">
-              Weight
-            </a>
-          </li>
           <li style={{ marginRight: "90px" }}>
             <a className="navList" href="/sleep">
               Sleep
             </a>
->>>>>>> 78ba9062d075f6e8fff7c647e1285c46bde9618a:src/components/Navbar.js
           </li>
         </ul>
       </div>
