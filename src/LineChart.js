@@ -39,7 +39,7 @@ const LineChart = ({ dataSet, labelSet, text, color}) => {
     labels,
     datasets: [
       {
-        label: 'Pulse Data',
+        label: 'Dataset',
         data: dataSet,
         tension: 0.3,
         borderColor: color,

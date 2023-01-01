@@ -37,7 +37,7 @@ const BarChart = ({ dataSet, labelSet, text }) => {
     labels,
     datasets: [
       {
-        label: 'Pulse Data',
+        label: 'Dataset',
         data: dataSet,
         backgroundColor: [
             '#605d8a',

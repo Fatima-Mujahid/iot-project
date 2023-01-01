@@ -45,9 +45,6 @@ export default function Navbar() {
           <li>
             <a className="navList" href="/walk">Distance</a>
           </li>
-          <li>
-            <a className="navList" href="/weight">Weight</a>
-          </li>
           <li style={{ marginRight: '90px'}}>
             <a className="navList" href="/sleep">Sleep</a>
           </li>

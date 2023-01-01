@@ -3,6 +3,8 @@ import "./App.css";
 import BpmView from './BpmView';
 import Navbar from './Navbar';
 import PulseReportView from './PulseReportView';
+import SleepView from './SleepView';
+import WalkView from './WalkView';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -13,9 +15,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<BpmView />} />
-          {/* <Route path="/sleep" element={<SleepView />} />
-          <Route path="/weight" element={<WeightView />} />
-          <Route path="/walk" element={<WalkView />} /> */}
+          <Route path="/sleep" element={<SleepView />} />
+          <Route path="/walk" element={<WalkView />} />
           <Route path="/pulsereport" element={<PulseReportView />} />
         </Routes>
       </Router>

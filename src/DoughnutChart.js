@@ -40,9 +40,9 @@ const DoughnutChart = ({ dataSet, labelSet, text }) => {
         label: 'Dataset 1',
         data: dataSet,
         backgroundColor: [
-            '#47B39C',
-            '#FFC154',
-            '#EC6B56'
+            '#605d8a',
+            '#FFC154'
+            
           ],
       },
     ],
