@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import moment from 'moment';
-import { db } from "./firebase";
+import { db } from "../firebase";
 import { ref, onValue } from "firebase/database";
 import BarChart from './BarChart';
 import LineChart from './LineChart';

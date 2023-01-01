@@ -1,15 +1,18 @@
 import { useState } from "react";
-import "./Navbar.css";
+import { ReactComponent as Logo } from "../logo.svg";
+import "../styles/Navbar.css";
 
 export default function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   return (
     <nav className="navigation">
-      
-      <a href="/" className="brand-name">
-        Pulse Plus
-      </a>
+      <div className="brand-name">
+        <a href="/">
+          <Logo />
+        </a>
+      </div>
+
       <button
         className="hamburger"
         onClick={() => {
@@ -37,16 +40,34 @@ export default function Navbar() {
       >
         <ul>
           <li>
-            <a className="navList" href="/">Rate</a>
+            <a className="navList" href="/">
+              Rate
+            </a>
           </li>
           <li>
-            <a className="navList" href="/pulsereport">Activity</a>
+            <a className="navList" href="/pulsereport">
+              Activity
+            </a>
           </li>
           <li>
-            <a className="navList" href="/walk">Distance</a>
+            <a className="navList" href="/walk">
+              Distance
+            </a>
           </li>
+<<<<<<< HEAD:src/Navbar.js
           <li style={{ marginRight: '90px'}}>
             <a className="navList" href="/sleep">Sleep</a>
+=======
+          <li>
+            <a className="navList" href="/weight">
+              Weight
+            </a>
+          </li>
+          <li style={{ marginRight: "90px" }}>
+            <a className="navList" href="/sleep">
+              Sleep
+            </a>
+>>>>>>> 78ba9062d075f6e8fff7c647e1285c46bde9618a:src/components/Navbar.js
           </li>
         </ul>
       </div>

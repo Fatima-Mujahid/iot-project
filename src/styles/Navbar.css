@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+.navigation {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0.5rem 1.2rem;
+  background-color: #3f3a8a;
+  color: #707070;
+  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+}
+
+.brand-name {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: 1.6rem;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 60px;
+}
+
+.brand-name svg {
+  /* text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow : 0.3px 0.3px 0.3px #ffffff; */
+  width: 180px;
+}
+
+.navigation-menu {
+  margin-left: auto;
+}
+
+.navigation-menu ul {
+  display: flex;
+  padding: 0;
+}
+
+.navigation-menu li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+
+.navigation-menu li a {
+  text-decoration: none;
+  display: block;
+  /* width: 100%; */
+}
+
+.navigation-menu ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.navigation-menu ul li:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: teal;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.hamburger:hover {
+  background-color: teal;
+}
+
+.logoImg {
+  margin-left: 1rem;
+  height: 40px;
+  width: auto;
+}
+
+.navList {
+  color: #ffffff;
+}
+
+body {
+  font-family: "montserrat", sans-serif;
+}
+
+@media screen and (max-width: 550px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navigation {
+    padding: 0.5rem 0rem;
+  }
+
+  .navigation-menu ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    /* height: calc(100vh - 60px); */
+    display: none;
+  }
+
+  .navigation-menu li {
+    text-align: center;
+    margin: 0;
+  }
+
+  .navigation-menu li a {
+    color: #ffffff;
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+
+  .navigation-menu li:hover {
+    background-color: #eee;
+  }
+
+  .navigation-menu.expanded ul {
+    display: block;
+    background-color: teal;
+    z-index: 1;
+    transition: all 5s ease;
+  }
+}
